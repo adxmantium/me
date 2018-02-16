@@ -1,6 +1,8 @@
 // reducers.js
 
-const init = {};
+const init = {
+	activeNavItem: 'Me',
+};
 
 export default function(state = init, action) {
 
