@@ -10,7 +10,7 @@ import _me from './reducers/me'
 
 //create and combine middleware
 // -- dev 
-const middleware = applyMiddleware(thunk, promise(), logger());
+const middleware = applyMiddleware(thunk, promise(), logger);
 
 // -- production
 // const middleware = applyMiddleware(thunk, promise());
