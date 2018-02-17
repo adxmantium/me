@@ -1,4 +1,4 @@
-// /styles/nav.js
+// /styles/nav.scss
 
 @import '_global.scss';
 
@@ -6,6 +6,7 @@ $row: 85px;
 
 nav {
 	position: relative;
+	width: 100%;
 
 	.grid{
 		border: thin solid red;		
@@ -23,6 +24,12 @@ nav {
 			align-items: center;
 			background-color: #fff;
 			border-radius: 100%;
+			cursor: pointer;
+			box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+
+			&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5); }
+
+			&.active{ color: teal; }
 
 			.name{
 				font-size: 14px;

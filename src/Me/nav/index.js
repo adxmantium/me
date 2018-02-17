@@ -4,6 +4,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+// actions
+import { setActiveNavItem } from './../../actions/me'
+
 // styles
 import './../../styles/nav.scss'
 
@@ -44,12 +47,40 @@ class Nav extends Component {
 	}
 }
 
-const NavIcon = ({ icon, name, onClick }) => (
-	<div className="item" onClick={ onClick }>
-		<i className={`fas fa-${icon}`} />
-		<div className="name">{ name }</div>
-	</div>
-)
+class NavIcon extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			hovering: false,
+		};
+	}
+
+	shouldComponentUpdate(np, ns){
+		const { hovering } = this.state;
+		const { hovering: next_hovering } = ns;
+
+		const { active } = this.props;
+		const { active: next_active } = np;
+
+		return hovering !== next_hovering || active !== next_active;
+	}
+
+	render(){
+		const { icon, name, active, onClick } = this.props;
+		const { hovering } = this.state;
+
+		return(
+			<div 
+				className={`item ${active ? 'active' : ''}`}
+				onClick={ () => onClick(name) }
+				onMouseEnter={ () => this.setState({hovering: true}) }
+				onMouseLeave={ () => this.setState({hovering: false}) }>
+					{ hovering && <div className="name">{ name }</div> }
+					{ !hovering && <div><i className={`fas fa-${icon}`} /></div> }
+			</div>
+		);
+	}
+}
 
 const mapStateToProps = (state, props) => ({
 	_me: state._me,
