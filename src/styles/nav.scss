@@ -2,6 +2,43 @@
 
 @import '_global.scss';
 
+$row: 85px;
+
 nav {
-			
+	position: relative;
+
+	.grid{
+		border: thin solid red;		
+		display: grid;
+		grid-template-rows: $row;
+		grid-template-columns: $row $row $row $row $row;
+		grid-column-gap: 10px;
+		justify-content: center;
+
+		> .item{
+			border: thin solid blue;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 100%;
+
+			.name{
+				font-size: 14px;
+			}
+		}
+	}	
+
+	> .line{
+		border-top: 2px solid;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    bottom: 0;
+	    margin: auto 0;
+	    height: 0px;
+	    z-index: -1;
+	}
 }

@@ -1,4 +1,4 @@
-// reducers.js
+// reducers/me.js
 
 const init = {
 	activeNavItem: 'Me',

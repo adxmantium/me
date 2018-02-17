@@ -12,14 +12,19 @@ module.exports = {
     module: {
         rules: [
 
+            // resolve .scss files using css-loader and style-loader modules
+            {
+                test: /\.scss$/, 
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+
             // babel-loader: transform es6 to es5
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                  loader: "babel-loader"
-                }
-            }
+                use: {loader: "babel-loader"}
+            } 
+
         ]
     }
 };
