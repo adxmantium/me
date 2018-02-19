@@ -23,10 +23,10 @@ export default class CodeUI extends Component {
 	}
 }
 
-const Grid = ({ countClass, count, codeClass, code }) => {
+const Grid = ({ count, codeClass, code, standout }) => {
 	return(
-		<div className="grid">
-			<div className={`lineCount ${countClass ? countClass : ''}`}>{ count }</div>
+		<div className={`grid ${standout ? standout : ''}`}>
+			<div className="lineCount">{ count }</div>
 			<div className={`code ${codeClass ? codeClass : ''}`}>{ code }</div>
 		</div>
 	);

@@ -29,6 +29,8 @@ $offset: 20;
 	    	color: $mild;
 	    }
 
+	    &.standout{ background-color: $bgLight; }
+
 		&:hover{ 
 			background-color: #eee; 
 			color: $mild;

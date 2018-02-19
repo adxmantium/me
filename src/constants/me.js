@@ -42,7 +42,7 @@ const nameComponent = {
 		code: <span><span className="propname">{'Name'}</span>=<b className="myname">{'"Adam Adams"'}</b></span>,
 		explain: <span>My name is <b className="myname">Adam Adams</b></span>
 	}),
-	codeClass: 'prop'
+	codeClass: 'prop',
 }
 
 // contact prop
@@ -52,7 +52,8 @@ const contactComponents = [
 			code: <span><span className="propname">{'Contact'}</span>=<b>{'{{'}</b></span>,
 			explain: <span>The following items are my <b>Contact</b> information:</span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: socialCode(SOCIAL.em),
@@ -78,7 +79,8 @@ const socialComponents = [
 			code: <span><span className="propname">{'Social'}</span>=<b>{'{{'}</b></span>,
 			explain: <span>The following items are my active <b>Social</b> media accounts:</span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: socialCode(SOCIAL.gh),
@@ -120,7 +122,8 @@ const skillsComponents = [
 			code: <span><span className="propname">{'Skills'}</span>{'='}<b>{'{{'}</b></span>,
 			explain: <span>The following items are a summary of my <b>Skills:</b></span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: codeExplain({
@@ -166,7 +169,8 @@ const projectComponents = [
 			code: <span><span className="propname">{'Projects'}</span>{'='}<b>{'{['}</b></span>,
 			explain: <span>The following items are a list of my recent <b>Projects</b>:</span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: codeExplain({
@@ -254,7 +258,8 @@ const experienceComponents = [
 			code: <span><span className="propname">{'Experience'}</span>{'='}<b>{'{['}</b></span>,
 			explain: <span>The following items are a list of my recent work <b>Experience</b>:</span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: codeExplain({
@@ -314,7 +319,8 @@ const educationComponents = [
 			code: <span><span className="propname">{'Education'}</span>{'='}<b>{'{{'}</b></span>,
 			explain: <span>The following a summary of my <b>Education</b>:</span>
 		}),
-		codeClass: 'prop'
+		codeClass: 'prop',
+		standout: 'standout'
 	},
 		{
 			code: codeExplain({
