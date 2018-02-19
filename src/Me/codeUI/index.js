@@ -7,13 +7,22 @@ import './../../styles/code.scss'
 
 // constants
 const SOCIAL = {
-	github: 'https://github.com/ajadams',
-	ig: 'https://www.instagram.com/adam.squared/',
-	fb: 'https://www.facebook.com/adam.adams.372',
-	medium: 'https://medium.com/@ajadams10',
-	unsplash: 'https://unsplash.com/@atom7dev',
-	in: 'https://www.linkedin.com/in/adamadams10/'
+	gh: {name: 'Github', link: 'https://github.com/ajadams', icon: <i className='fab fa-github' />, text: '"Check out my latest code here."'},
+	ig: {name: 'Instagram', link: 'https://www.instagram.com/adam.squared/', icon: <i className='fab fa-instagram' />, text: '"This is where I like to share new things that I am doing."'},
+	fb: {name: 'Facebook', link: 'https://www.facebook.com/adam.adams.372', icon: <i className='fab fa-facebook' />, text: '"Another place where you may contact me."'},
+	me: {name: 'Medium', link: 'https://medium.com/@ajadams10', icon: <i className='fab fa-medium' />, text: '"I like to write about my interests here."'},
+	un: {name: 'Unsplash', link: 'https://unsplash.com/@atom7dev', icon: <i className='fas fa-camera' />, text: '"Sharing photos I take for others to freely use here."'},
+	in: {name: 'Linkedin', link: 'https://www.linkedin.com/in/adamadams10/', icon: <i className='fab fa-linkedin' />, text: '"Check out out my professional experience here."'},
+	em: {name: 'Email', link: '', icon: <i className='fas fa-envelope' />, text: '"ajadams@gmail.com"'},
+	lo: {name: 'Location', link: '', icon: <i className='fas fa-map-marker' />, text: '"Walnut Creek, CA"'},
 }
+
+const socialCode = ({ name, link, icon, text }) => (
+	<div className="social">
+		<div className="name">{ name }: { text }</div>
+		<a className="icon" href={link} target="_blank">{icon} : {text}</a>
+	</div>
+)
 
 const HelloWorld = [
 	{
@@ -31,41 +40,55 @@ const HelloWorld = [
 		codeClass: 'prop'
 	},
 		{
-			code: 'Email: "ajadams@gmail.com"',
+			code: socialCode(SOCIAL.em),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.github} target="_blank">Github</a>: "Check out my latest code here."</div>,
+			code: socialCode(SOCIAL.lo),
+			codeClass: 'objProp'
+		},
+	{
+		code: <span className="nohighlight"><b>{'}}'}</b></span>,
+		codeClass: 'prop'
+	},
+
+	// social
+	{
+		code: <span><span className="propname">{'Social'}</span>=<b>{'{{'}</b></span>,
+		codeClass: 'prop'
+	},
+		{
+			code: socialCode(SOCIAL.gh),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.ig} target="_blank">Instagram</a>: "This is where I like to share new things that I am doing."</div>,
+			code: socialCode(SOCIAL.ig),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.in} target="_blank">Linkedin</a>: "Check out out my professional experience here."</div>,
+			code: socialCode(SOCIAL.in),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.fb} target="_blank">Facebook</a>: "Another place where you may contact me."</div>,
+			code: socialCode(SOCIAL.fb),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.unsplash} target="_blank">Unsplash</a>: "Sharing photos I take for others to freely use here."</div>,
+			code: socialCode(SOCIAL.un),
 			codeClass: 'objProp'
 		},
 		{
-			code: <div><a href={SOCIAL.medium} target="_blank">Medium</a>: "I like to write about my interests here."</div>,
+			code: socialCode(SOCIAL.me),
 			codeClass: 'objProp'
 		},	
 	{
-		code: <b>{'}}'}</b>,
+		code: <span className="nohighlight"><b>{'}}'}</b></span>,
 		codeClass: 'prop'
 	},
 
 	// skills props
 	{
-		code: <span><span className="propname">{'Skills'}</span>{'={{'}</span>,
+		code: <span><span className="propname">{'Skills'}</span>{'='}<b>{'{{'}</b></span>,
 		codeClass: 'prop'
 	},
 		{
@@ -81,17 +104,17 @@ const HelloWorld = [
 			codeClass: 'objProp'
 		},
 	{
-		code: '}}',
+		code: <span className="nohighlight"><b>{'}}'}</b></span>,
 		codeClass: 'prop'
 	},
 
 	// projects
 	{
-		code: 'Projects={[',
+		code: <span><span className="propname">{'Projects'}</span>{'='}<b>{'{['}</b></span>,
 		codeClass: 'prop'
 	},
 		{
-			code: '{',
+			code: <span className="nohighlight">{'{'}</span>,
 			codeClass: 'objProp'
 		},
 			{
@@ -107,11 +130,11 @@ const HelloWorld = [
 				codeClass: 'objProp2'
 			},
 		{
-			code: '},',
+			code: <span className="nohighlight">{'},'}</span>,
 			codeClass: 'objProp'
 		},
 		{
-			code: '{',
+			code: <span className="nohighlight">{'{'}</span>,
 			codeClass: 'objProp'
 		},
 			{
@@ -127,21 +150,21 @@ const HelloWorld = [
 				codeClass: 'objProp2'
 			},
 		{
-			code: '}',
+			code: <span className="nohighlight">{'}'}</span>,
 			codeClass: 'objProp'
 		},
 	{
-		code: ']}',
+		code: <span className="nohighlight"><b>{']}'}</b></span>,
 		codeClass: 'prop'
 	},
 
 	// experience
 	{
-		code: 'Experience={[',
+		code: <span><span className="propname">{'Experience'}</span>{'='}<b>{'{['}</b></span>,
 		codeClass: 'prop'
 	},
 		{
-			code: '{',
+			code: <span className="nohighlight">{'{'}</span>,
 			codeClass: 'objProp'
 		},
 			{
@@ -165,11 +188,11 @@ const HelloWorld = [
 				codeClass: 'objProp2'
 			},
 		{
-			code: '},',
+			code: <span className="nohighlight">{'},'}</span>,
 			codeClass: 'objProp'
 		},
 		{
-			code: '{',
+			code: <span className="nohighlight">{'{'}</span>,
 			codeClass: 'objProp'
 		},
 			{
@@ -193,18 +216,18 @@ const HelloWorld = [
 				codeClass: 'objProp2'
 			},
 		{
-			code: '}',
+			code: <span className="nohighlight">{'}'}</span>,
 			codeClass: 'objProp'
 		},
 	{
-		code: ']}',
+		code: <span className="nohighlight"><b>{']}'}</b></span>,
 		codeClass: 'prop'
 	},
 
 
 	// end of component
 	{
-		code: "/>",
+		code: <b className="propname componentName">{"/>"}</b>,
 	},
 ]
 

@@ -22,7 +22,25 @@ $offset: 20;
 	    align-items: center;
 	    border-radius: 2px;
 
-		&:hover{ background-color: #eee; }
+		&:hover{ 
+			background-color: #eee; 
+			color: $mild;
+
+			.nohighlight{ color: $gray; }
+
+			.social{
+				.name{ display: none; }
+				.icon{ 
+					display: block; 
+					color: $mild;
+				}
+
+				[class*="fa-"]{ 
+					color: $mild; 
+					font-size: 22px;
+				}
+			}	
+		}
 
 		> div{
 			&.lineCount{
@@ -61,6 +79,13 @@ $offset: 20;
 			a{
 				text-decoration: none;
 				color: $gray;
+			}
+
+			.social{
+				.name{ display: block; }
+				.icon{ 
+					display: none; 
+				}
 			}
 		}
 	}
