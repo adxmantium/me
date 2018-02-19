@@ -140,6 +140,13 @@ const HelloWorld = [
 			}),
 			codeClass: 'objProp'
 		},
+		{
+			code: codeExplain({
+				code: "PHP: 7/10",
+				explain: "NodeJS is my preferred backend technology, but PHP is no stranger to me. The Laravel framework makes PHP development a breeze."
+			}),
+			codeClass: 'objProp'
+		},
 	{
 		code: codeExplain({
 			code: <span className="nohighlight"><b>{'}}'}</b></span>,
@@ -232,23 +239,31 @@ const HelloWorld = [
 			codeClass: 'objProp'
 		},
 			{
-				code: 'company: "Plexuss"',
+				code: codeExplain({
+					code: 'company: "Plexuss"',
+					explain: <span>My current employer is Plexuss and we're a college recruiting network. Check us out at <a href="https://plexuss.com" target="_blank">plexuss.com</a></span>
+				}),
 				codeClass: 'objProp2'
 			},
 			{
-				code: 'role: "Software Engineer"',
+				code: codeExplain({
+					code: 'role: "Software Engineer"',
+					explain: "Being a fullstack developer at Plexuss means that I am constantly bouncing from React to Node to the AWS console."
+				}),
 				codeClass: 'objProp2'
 			},
 			{
-				code: 'when: "2014 - Present"',
+				code: codeExplain({
+					code: 'when: "2014 - Present"',
+					explain: "It has been a great learning experience in my 3 years here."
+				}),
 				codeClass: 'objProp2'
 			},
 			{
-				code: 'summary: "Though we don\'t exactly have concrete titles,',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'I consider myself a full stack developer here."',
+				code: codeExplain({
+					code: 'summary: "I have led the migration of converting our legacy codebase to React/Redux, built our mobile app using React Native, and improved our landing page load time from 12s to 2s."',
+					explain: "Other things I have done include developing an article generator that has produced more than 100 articles on our news page and revamped our messaging system utilizing socket.io which has improved reliability and performance."
+				}),
 				codeClass: 'objProp2'
 			},
 		{
