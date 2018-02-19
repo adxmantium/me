@@ -71,3 +71,10 @@ $offset: 20;
 		}
 	}
 }
+
+@media only screen and (max-width: 900px){
+	#component{
+		border-radius: 0;
+		margin: auto;
+	}		
+}

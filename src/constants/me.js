@@ -363,7 +363,7 @@ const educationComponents = [
 			explain: <span className="nohighlight"><b>{'}}'}</b> // end of <b>Education</b> information.</span>
 		}),
 		codeClass: 'prop'
-	}
+	},	
 ]
 
 const closingComponent = {
@@ -371,6 +371,11 @@ const closingComponent = {
 		code: <b className="propname componentName">{"/>"}</b>,
 		explain: <span><b>{"/>"}</b> // end of my <b>Portfolio. </b>Thank you for indulging me :)</span>
 	}),
+}
+
+const fillerComponent = {
+	code: '',
+	codeClass: 'prop'
 }
 
 export const HelloWorld = [
@@ -383,4 +388,11 @@ export const HelloWorld = [
 	...experienceComponents,
 	...educationComponents,
 	closingComponent,
+	fillerComponent,
+	fillerComponent,
+	fillerComponent,
+	fillerComponent,
+	fillerComponent,
+	fillerComponent,
+	fillerComponent,
 ]
