@@ -24,6 +24,6 @@ body{
 
 // small and down
 @media only screen and (max-width: 900px){
-	body{ overflow-y: auto; }
+	#_Me{ overflow-y: auto; }
 	#mainContainer{ padding: 0; }		
 }
