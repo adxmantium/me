@@ -22,18 +22,20 @@ $offset: 20;
 	    align-items: center;
 	    border-radius: 2px;
 
+	    .show{ display: initial; }
+	    .showOnHover{ display: none; }
+
 		&:hover{ 
 			background-color: #eee; 
 			color: $mild;
 
 			.nohighlight{ color: $gray; }
 
+			.show{ display: none; }
+			.showOnHover{ display: block; }
+
 			.social{
-				.name{ display: none; }
-				.icon{ 
-					display: block; 
-					color: $mild;
-				}
+				.icon{ color: $mild; }
 
 				[class*="fa-"]{ 
 					color: $mild; 
@@ -42,51 +44,24 @@ $offset: 20;
 			}	
 		}
 
+		a{
+			text-decoration: none;
+			color: $gray;
+		}
+
 		> div{
-			&.lineCount{
-				padding: 0 0 0 $pad;
-			}
-
-			&.code{
-				padding: 0 0 0 $pad;
-			}
-
-			&.prop{
-				padding: 0 0 0 $pad+($offset*1);
-			}
-
-			&.objProp{
-				padding: 0 0 0 $pad+($offset*2);
-			}
-
-			&.objProp2{
-				padding: 0 0 0 $pad+($offset*3);
-			}
-
+			&.lineCount{ padding: 0 0 0 $pad; }
+			&.code{ padding: 0 0 0 $pad; }
+			&.prop{ padding: 0 0 0 $pad+($offset*1); }
+			&.objProp{ padding: 0 0 0 $pad+($offset*2); }
+			&.objProp2{ padding: 0 0 0 $pad+($offset*3); }
+			.componentName{ font-size: 18px; }
+			.propname{ color: #fff; }
 			.myname{
 				font-size: 24px;
 				color: $alert;
 			}
 
-			.componentName{
-				font-size: 18px;
-			}
-
-			.propname{
-				color: #fff;
-			}
-
-			a{
-				text-decoration: none;
-				color: $gray;
-			}
-
-			.social{
-				.name{ display: block; }
-				.icon{ 
-					display: none; 
-				}
-			}
 		}
 	}
 }

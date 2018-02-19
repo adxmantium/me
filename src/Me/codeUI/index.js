@@ -13,14 +13,14 @@ const SOCIAL = {
 	me: {name: 'Medium', link: 'https://medium.com/@ajadams10', icon: <i className='fab fa-medium' />, text: '"I like to write about my interests here."'},
 	un: {name: 'Unsplash', link: 'https://unsplash.com/@atom7dev', icon: <i className='fas fa-camera' />, text: '"Sharing photos I take for others to freely use here."'},
 	in: {name: 'Linkedin', link: 'https://www.linkedin.com/in/adamadams10/', icon: <i className='fab fa-linkedin' />, text: '"Check out out my professional experience here."'},
-	em: {name: 'Email', link: '', icon: <i className='fas fa-envelope' />, text: '"ajadams@gmail.com"'},
-	lo: {name: 'Location', link: '', icon: <i className='fas fa-map-marker' />, text: '"Walnut Creek, CA"'},
+	em: {name: 'Email', link: 'mailto:ajadams10@gmail.com', icon: <i className='fas fa-envelope' />, text: 'Best way to contact me!', hoverText: '"ajadams@gmail.com"'},
+	lo: {name: 'Location', link: 'https://www.google.com/maps/place/Walnut+Creek,+CA/@37.8942235,-122.0402229,13z/data=!3m1!4b1!4m5!3m4!1s0x808ff474197ba5f3:0xe06e49972003c36c!8m2!3d37.9100783!4d-122.0651819?hl=en', icon: <i className='fas fa-compass' />, text: '"Walnut Creek, CA"'},
 }
 
-const socialCode = ({ name, link, icon, text }) => (
+const socialCode = ({ name, link, icon, text, hoverText }) => (
 	<div className="social">
-		<div className="name">{ name }: { text }</div>
-		<a className="icon" href={link} target="_blank">{icon} : {text}</a>
+		<div className="name show">{ name }: { text }</div>
+		<a className="icon showOnHover" href={link} target="_blank">{icon} : {hoverText || text}</a>
 	</div>
 )
 
@@ -191,39 +191,40 @@ const HelloWorld = [
 			code: <span className="nohighlight">{'},'}</span>,
 			codeClass: 'objProp'
 		},
-		{
-			code: <span className="nohighlight">{'{'}</span>,
-			codeClass: 'objProp'
-		},
-			{
-				code: 'company: "Cognizant Technology Solutions"',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'role: "Performace Test Engineer"',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'when: "June - December 2014"',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'summary: "',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'I consider myself a full stack developer here."',
-				codeClass: 'objProp2'
-			},
-		{
-			code: <span className="nohighlight">{'}'}</span>,
-			codeClass: 'objProp'
-		},
 	{
 		code: <span className="nohighlight"><b>{']}'}</b></span>,
 		codeClass: 'prop'
 	},
 
+	// education
+	{
+		code: <span><span className="propname">{'Education'}</span>{'='}<b>{'{{'}</b></span>,
+		codeClass: 'prop'
+	},
+		{
+			code: 'School: "Arizona State University"',
+			codeClass: 'objProp2'
+		},
+		{
+			code: 'major: "Computer Information Systems"',
+			codeClass: 'objProp2'
+		},
+		{
+			code: 'Graduated: "2014"',
+			codeClass: 'objProp2'
+		},
+		{
+			code: 'didVolunteer: true',
+			codeClass: 'objProp2'
+		},
+		{
+			code: 'leadershipOpportunities: 2',
+			codeClass: 'objProp2'
+		},
+	{
+		code: <span className="nohighlight"><b>{'}}'}</b></span>,
+		codeClass: 'prop'
+	},
 
 	// end of component
 	{
