@@ -7,7 +7,7 @@ $offset: 20;
 
 #component{
 	max-width: 900px;
-	margin: auto;
+	margin: 0 auto 50px;
 	background-color: $bg;
 	color: $gray;
 	border-radius: 5px;
@@ -15,15 +15,19 @@ $offset: 20;
 
 	.grid{
 		display: grid;
-		grid-template-rows: 30px;
+		grid-template-rows: auto;
 		grid-template-columns: 50px auto;
-
 		justify-items: flex-start;
 	    align-items: center;
 	    border-radius: 2px;
+	    padding: 5px 0;
 
 	    .show{ display: initial; }
 	    .showOnHover{ display: none; }
+
+	    .explain{
+	    	color: $mild;
+	    }
 
 		&:hover{ 
 			background-color: #eee; 
