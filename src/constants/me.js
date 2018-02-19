@@ -375,7 +375,7 @@ const closingComponent = {
 
 const fillerComponent = {
 	code: '',
-	codeClass: 'prop'
+	codeClass: 'prop',
 }
 
 export const HelloWorld = [
