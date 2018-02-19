@@ -290,23 +290,38 @@ const HelloWorld = [
 		codeClass: 'prop'
 	},
 		{
-			code: 'School: "Arizona State University"',
+			code: codeExplain({
+				code: 'School: "Arizona State University"',
+				explain: "ASU is my alma mater and is the place where I learned that I wanted to be a developer of many facets."
+			}),
 			codeClass: 'objProp2'
 		},
 		{
-			code: 'major: "Computer Information Systems"',
+			code: codeExplain({
+				code: 'major: "Computer Information Systems"',
+				explain: "Though not quite the equivalent of a computer science degree, I learned the basics of programming and the internet."
+			}),
 			codeClass: 'objProp2'
 		},
 		{
-			code: 'Graduated: "2014"',
+			code: codeExplain({
+				code: 'Graduated: "2014"',
+				explain: 'Graduated: "2014"'
+			}),
 			codeClass: 'objProp2'
 		},
 		{
-			code: 'didVolunteer: true',
+			code: codeExplain({
+				code: 'didVolunteer: true',
+				explain: "I volunteered my time doing various activities including tutoring at Microsoft App-Building events and instructing at the Boys and Girls Club."
+			}),
 			codeClass: 'objProp2'
 		},
 		{
-			code: 'leadershipOpportunities: 2',
+			code: codeExplain({
+				code: 'leadershipOpportunities: 2',
+				explain: "I was a part of 2 clubs: one was major-related and the other was focused on connecting the ASU community."
+			}),
 			codeClass: 'objProp2'
 		},
 	{
