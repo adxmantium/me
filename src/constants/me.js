@@ -18,7 +18,9 @@ const SOCIAL = {
 const socialCode = ({ name, link, icon, text, hoverText }) => (
 	<div className="social">
 		<div className="name show">{ name }: { text }</div>
-		<a className="icon showOnHover" href={link} target="_blank">{icon}  {hoverText || text}</a>
+		<div className="icon showOnHover">
+			<a href={link} target="_blank">{icon}</a> <span className="social-descrip">{hoverText || text}</span>
+		</div>
 	</div>
 )
 
