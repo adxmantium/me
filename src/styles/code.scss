@@ -1,0 +1,67 @@
+// /styles/main.scss
+
+@import '_global.scss';
+
+$pad: 10px;
+$offset: 20;
+
+#component{
+	max-width: 900px;
+	margin: auto;
+	background-color: $bg;
+	color: $gray;
+	border-radius: 5px;
+	padding: 20px;
+
+	.grid{
+		display: grid;
+		grid-template-rows: 30px;
+		grid-template-columns: 50px auto;
+
+		justify-items: flex-start;
+	    align-items: center;
+	    border-radius: 2px;
+
+		&:hover{ background-color: #eee; }
+
+		> div{
+			&.lineCount{
+				padding: 0 0 0 $pad;
+			}
+
+			&.code{
+				padding: 0 0 0 $pad;
+			}
+
+			&.prop{
+				padding: 0 0 0 $pad+($offset*1);
+			}
+
+			&.objProp{
+				padding: 0 0 0 $pad+($offset*2);
+			}
+
+			&.objProp2{
+				padding: 0 0 0 $pad+($offset*3);
+			}
+
+			.myname{
+				font-size: 24px;
+				color: $alert;
+			}
+
+			.componentName{
+				font-size: 18px;
+			}
+
+			.propname{
+				color: #fff;
+			}
+
+			a{
+				text-decoration: none;
+				color: $gray;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+// /styles/main.scss
+
+@import '_global.scss';
+
+#banner{
+	background-color: #eee;
+	text-align: center;
+
+	.name{
+		font-size: 50px;
+		font-weight: 400;
+	}
+
+	.quote{
+		padding: 20px;
+		max-width: 500px;
+		margin: auto;
+
+		.quotation{
+			color: #aaa;
+			font-size: 24px;
+			display: inline;
+
+			&.left{ margin-right: 10px; }
+			&.right{ margin-left: 10px; }
+		}
+	}
+
+	.social{
+		border: thin solid red;
+
+		a.icon{
+			display: inline-block;
+			font-size: 30px;
+			color: #202020;
+
+			&:not(:last-child){
+				margin-right: 10px;
+			}
+		}
+	}
+}
