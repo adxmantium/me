@@ -171,15 +171,24 @@ const HelloWorld = [
 			codeClass: 'objProp'
 		},
 			{
-				code: 'name: "SnowboardSizer"',
+				code: codeExplain({
+					code: 'name: "SnowboardSizer"',
+					explain: 'This app helps beginner snowboard shoppers find the right snowboard size for them.'
+				}),
 				codeClass: 'objProp2'
 			},
 			{
-				code: 'toolsUsed: "React Native, Android Studio, Xcode"',
+				code: codeExplain({
+					code: 'toolsList: ["React Native", "Android Studio", "Xcode"]',
+					explain: 'This app was intended to be very lightweight. I did not use any outside libraries, just the built-in components.'
+				}),
 				codeClass: 'objProp2'
 			},
 			{
-				code: 'whereCanIFind: "iOS/Android app stores"',
+				code: codeExplain({
+					code: 'platforms: ["iOS", "Android"]',
+					explain: <span>Find here: <a href="https://itunes.apple.com/us/app/snowboardsizer/id1329300217?ls=1&mt=8">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.snowboardsizer">Play Store</a></span>
+				}),
 				codeClass: 'objProp2'
 			},
 		{
@@ -189,32 +198,41 @@ const HelloWorld = [
 			}),
 			codeClass: 'objProp'
 		},
-		{
-			code: codeExplain({
-				code: <span className="nohighlight">{'{'}</span>,
-				explain: <span className="nohighlight">{'{'} // start of project 2</span>
-			}),
-			codeClass: 'objProp'
-		},
-			{
-				code: 'name: "WakeMe"',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'toolsUsed: "React Native, Android Studio, Xcode, AWS(Lambda, DB, S3), Serverless Framework, and OneSignal"',
-				codeClass: 'objProp2'
-			},
-			{
-				code: 'whereCanIFind: "iOS/Android app stores"',
-				codeClass: 'objProp2'
-			},
-		{
-			code: codeExplain({
-				code: <span className="nohighlight">{'}'}</span>,
-				explain: <span className="nohighlight">{'}'} // end of project 2</span>
-			}),
-			codeClass: 'objProp'
-		},
+		// {
+		// 	code: codeExplain({
+		// 		code: <span className="nohighlight">{'{'}</span>,
+		// 		explain: <span className="nohighlight">{'{'} // start of project 2</span>
+		// 	}),
+		// 	codeClass: 'objProp'
+		// },
+		// 	{
+		// 		code: codeExplain({
+		// 			code: 'name: "WakeMe"',
+		// 			explain: 'WakeMe is where an alarm app meets Snapchat. You can send pics/vids to friends, but they cannot view them until the next morning when their alarm goes off.'
+		// 		}),
+		// 		codeClass: 'objProp2'
+		// 	},
+		// 	{
+		// 		code: codeExplain({
+		// 			code: 'toolsUsed: ["React Native", "Android Studio", "Xcode", "AWS(Lambda, DB, S3)", "Serverless Framework", "OneSignal"]',
+		// 			explain: "I used this project to experiment with a serverless architecture using AWS technology and the Serverless Framework to build efficient APIs. OneSignal is the platform I used to send push notifications to devices."
+		// 		}),
+		// 		codeClass: 'objProp2'
+		// 	},
+		// 	{
+		// 		code: codeExplain({
+		// 			code: 'platforms: ["iOS", "Android"]',
+		// 			explain: <span>Find here: <a href="">App Store</a> and <a href="">Play Store</a></span>
+		// 		}),
+		// 		codeClass: 'objProp2'
+		// 	},
+		// {
+		// 	code: codeExplain({
+		// 		code: <span className="nohighlight">{'}'}</span>,
+		// 		explain: <span className="nohighlight">{'}'} // end of project 2</span>
+		// 	}),
+		// 	codeClass: 'objProp'
+		// },
 	{
 		code: codeExplain({
 			code: <span className="nohighlight"><b>{']}'}</b></span>,
