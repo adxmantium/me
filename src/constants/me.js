@@ -454,7 +454,7 @@ const bioSection = [
 		},
 		{
 			code: codeExplain({
-				code: 'reading: "love",',
+				code: 'reading: "love"',
 				explain: "I have been on a self-improvement fix lately, so that consumes a majority of my reading right now."
 			}),
 			codeClass: 'objProp'
