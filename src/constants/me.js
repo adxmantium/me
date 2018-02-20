@@ -5,19 +5,19 @@ import React from 'react'
 export const SET_NAV_ITEM = 'SET_NAV_ITEM'
 
 const SOCIAL = {
-	gh: {name: 'Github', link: 'https://github.com/ajadams', icon: <i className='fab fa-github' />, text: '"Check out my latest code here."', hoverText: 'I currently have 3 pending side-projects that are not live yet.'},
-	ig: {name: 'Instagram', link: 'https://www.instagram.com/adam.squared/', icon: <i className='fab fa-instagram' />, text: '"This is where I like to share new things that I am doing."', hoverText: 'Follow me here to see all my latest work related to my hobbies.'},
-	fb: {name: 'Facebook', link: 'https://www.facebook.com/adam.adams.372', icon: <i className='fab fa-facebook' />, text: '"Another place where you may contact me."', hoverText: 'I check FB very rarely, but feel free to message me on Messenger.'},
-	me: {name: 'Medium', link: 'https://medium.com/@ajadams10', icon: <i className='fab fa-medium' />, text: '"I like to write about my interests here."', hoverText: 'I currently have 4,000+ views on all of my Medium articles.', noComma: true},
-	un: {name: 'Unsplash', link: 'https://unsplash.com/@atom7dev', icon: <i className='fas fa-camera' />, text: '"Sharing photos I take for others to freely use here."', hoverText: 'I currently have 14,000+ views on all of my Unsplash photos.'},
-	in: {name: 'Linkedin', link: 'https://www.linkedin.com/in/adamadams10/', icon: <i className='fab fa-linkedin' />, text: '"Check out out my professional experience here."', hoverText: 'I am currently open to new opportunities!'},
-	em: {name: 'Email', link: 'mailto:ajadams10@gmail.com', icon: <i className='fas fa-envelope' />, text: '"Best way to contact me!"', hoverText: 'ajadams@gmail.com'},
-	lo: {name: 'Location', link: 'https://www.google.com/maps/place/Walnut+Creek,+CA/@37.8942235,-122.0402229,13z/data=!3m1!4b1!4m5!3m4!1s0x808ff474197ba5f3:0xe06e49972003c36c!8m2!3d37.9100783!4d-122.0651819?hl=en', icon: <i className='fas fa-compass' />, text: '"Walnut Creek, CA"', hoverText: 'Walnut Creek, CA', noComma: true},
+	gh: {name: 'Github', link: 'https://github.com/ajadams', icon: <i className='fab fa-github' />, text: '"Check out my latest code here.",', hoverText: 'I currently have 3 pending side-projects that are not live yet.'},
+	ig: {name: 'Instagram', link: 'https://www.instagram.com/adam.squared/', icon: <i className='fab fa-instagram' />, text: '"This is where I like to share new things that I am doing.",', hoverText: 'Follow me here to see all my latest work related to my hobbies.'},
+	fb: {name: 'Facebook', link: 'https://www.facebook.com/adam.adams.372', icon: <i className='fab fa-facebook' />, text: '"Another place where you may contact me.",', hoverText: 'I check FB very rarely, but feel free to message me on Messenger.'},
+	me: {name: 'Medium', link: 'https://medium.com/@ajadams10', icon: <i className='fab fa-medium' />, text: '"4k+ views"', hoverText: 'I currently have 4,000+ views on all of my Medium articles.'},
+	un: {name: 'Unsplash', link: 'https://unsplash.com/@atom7dev', icon: <i className='fas fa-camera' />, text: '"14k+ views.",', hoverText: 'I currently have 14,000+ views on all of my Unsplash photos.'},
+	in: {name: 'Linkedin', link: 'https://www.linkedin.com/in/adamadams10/', icon: <i className='fab fa-linkedin' />, text: '"Check out out my professional experience here.",', hoverText: 'I am currently open to new opportunities!'},
+	em: {name: 'Email', link: 'mailto:ajadams10@gmail.com', icon: <i className='fas fa-envelope' />, text: '"Best way to contact me!",', hoverText: 'ajadams@gmail.com'},
+	lo: {name: 'Location', link: 'https://www.google.com/maps/place/Walnut+Creek,+CA/@37.8942235,-122.0402229,13z/data=!3m1!4b1!4m5!3m4!1s0x808ff474197ba5f3:0xe06e49972003c36c!8m2!3d37.9100783!4d-122.0651819?hl=en', icon: <i className='fas fa-compass' />, text: '"Walnut Creek, CA"', hoverText: 'Walnut Creek, CA'},
 }
 
-const socialCode = ({ name, link, icon, text, hoverText, noComma }) => (
+const socialCode = ({ name, link, icon, text, hoverText }) => (
 	<div className="social">
-		<div className="name show">{ name }: { text }{!noComma && ','}</div>
+		<div className="name show">{ name }: { text }</div>
 		<div className="icon showOnHover">
 			<a href={link} target="_blank">{icon}</a> <span className="social-descrip">{hoverText || text}</span>
 		</div>
@@ -31,7 +31,7 @@ const codeExplain = ({ code, explain }) => (
 	</div>	
 )
 
-const openingComponent = {
+const openingSection = {
 	code: codeExplain({
 		code: <b className="propname componentName">{"<HelloWorld"}</b>,
 		explain: "Hello, World! Welcome to my Developer portfolio :)"
@@ -39,7 +39,7 @@ const openingComponent = {
 	codeClass: 'startEnd'
 }
 
-const nameComponent = {
+const nameSection = {
 	code: codeExplain({
 		code: <span><span className="propname">{'Name'}</span>=<b className="myname">{'"Adam Adams"'}</b></span>,
 		explain: <span>My name is <b className="myname">Adam Adams</b></span>
@@ -48,7 +48,7 @@ const nameComponent = {
 }
 
 // contact prop
-const contactComponents = [
+const contactSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Contact'}</span>=<b>{'{{'}</b></span>,
@@ -75,7 +75,7 @@ const contactComponents = [
 ]
 
 // social
-const socialComponents = [
+const socialSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Social'}</span>=<b>{'{{'}</b></span>,
@@ -118,7 +118,7 @@ const socialComponents = [
 ]
 
 // skills props
-const skillsComponents = [
+const skillsSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Skills'}</span>{'='}<b>{'{{'}</b></span>,
@@ -165,7 +165,7 @@ const skillsComponents = [
 ]
 
 // projects
-const projectComponents = [
+const projectSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Projects'}</span>{'='}<b>{'{['}</b></span>,
@@ -254,7 +254,7 @@ const projectComponents = [
 ]
 
 // experience
-const experienceComponents = [
+const experienceSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Experience'}</span>{'='}<b>{'{['}</b></span>,
@@ -315,7 +315,7 @@ const experienceComponents = [
 ]
 
 // education
-const educationComponents = [
+const educationSection = [
 	{
 		code: codeExplain({
 			code: <span><span className="propname">{'Education'}</span>{'='}<b>{'{{'}</b></span>,
@@ -337,11 +337,25 @@ const educationComponents = [
 				explain: "Though not quite the equivalent of a computer science degree, I learned the basics of programming and the internet."
 			}),
 			codeClass: 'objProp2'
+		},	
+		{
+			code: codeExplain({
+				code: 'freeCodeCampCertifications: 1',
+				explain: <span>Received the Front End Development Certification on <a href="https://www.freecodecamp.org/ajadams" target="_blank">FreeCodeCamp</a> to continue my education.</span>
+			}),
+			codeClass: 'objProp2'
 		},
 		{
 			code: codeExplain({
-				code: 'Graduated: "2014",',
-				explain: 'Graduated: "2014"'
+				code: 'codePen_pens: 10',
+				explain: <span>Check out my work on <a href="https://codepen.io/ajadams10/" target="_blank">CodePen</a>!</span>
+			}),
+			codeClass: 'objProp2'
+		},
+		{
+			code: codeExplain({
+				code: 'codeWars_kata_completed: 14',
+				explain: <span>Just start <a href="https://www.codewars.com/users/ajadams10/" target="_blank">CodeWars</a> to continue challenging myself.</span>
 			}),
 			codeClass: 'objProp2'
 		},
@@ -368,33 +382,92 @@ const educationComponents = [
 	},	
 ]
 
-const closingComponent = {
+const closingSection = {
 	code: codeExplain({
 		code: <b className="propname componentName">{"/>"}</b>,
 		explain: <span><b>{"/>"}</b> // end of my <b>Portfolio. </b>Thank you for indulging me :)</span>
 	}),
 }
 
-const fillerComponent = {
+const fillerSection = {
 	code: '',
 	codeClass: 'prop',
 }
 
+const bioSection = [
+	{
+		code: codeExplain({
+			code: <span><span className="propname">{'Bio'}</span>=<b>{'{{'}</b></span>,
+			explain: <span>The following items are a summary of who I am:</span>
+		}),
+		codeClass: 'prop',
+		standout: 'standout'
+	},
+		{
+			code: codeExplain({
+				code: 'passions: 7,',
+				explain: 'Programming, Photography, Computer-building, Soccer, Snowboarding, Coffee, and Traveling are deep passions I have.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'cupsOfCoffeePerDay: 2,',
+				explain: 'I drink about two cups of coffee a day, but I enjoy the brewing process just as much. Moka Express and French Press are my favorite.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'loveTryingNewThings: true,',
+				explain: 'I am all about experiencing new things, from visiting new places to trying new foods.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'athleticism: "high",',
+				explain: 'I love playing all sports and feel pretty confident in my ability picking up new sports'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'quirkySkill: "keyboard shortcuts",',
+				explain: 'I prefer to use the mouse as little possible. Keyboard shortcuts improve my productivity.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'reading: "love",',
+				explain: "I have been on a self-improvement fix lately, so that consumes a majority of my reading right now."
+			}),
+			codeClass: 'objProp'
+		},
+	{
+		code: codeExplain({
+			code: <span className="nohighlight"><b>{'}}'}</b></span>,
+			explain: <span className="nohighlight"><b>{'}}'}</b> // End of <b>Contact</b> information.</span>
+		}),
+		codeClass: 'prop'
+	}
+]
+
 export const HelloWorld = [
-	openingComponent,
-	nameComponent,
-	...contactComponents,
-	...socialComponents,
-	...skillsComponents,
-	...projectComponents,
-	...experienceComponents,
-	...educationComponents,
-	closingComponent,
-	fillerComponent,
-	fillerComponent,
-	fillerComponent,
-	fillerComponent,
-	fillerComponent,
-	fillerComponent,
-	fillerComponent,
+	openingSection,
+	nameSection,
+	...bioSection,
+	...contactSection,
+	...socialSection,
+	...skillsSection,
+	...projectSection,
+	...experienceSection,
+	...educationSection,
+	closingSection,
+	fillerSection,
+	fillerSection,
+	fillerSection,
+	fillerSection,
+	fillerSection,
 ]
