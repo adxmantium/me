@@ -405,6 +405,20 @@ const bioSection = [
 	},
 		{
 			code: codeExplain({
+				code: 'whoAmI: "A Front End Developer who builds and delivers experiences.",',
+				explain: 'I try to solve problems in unique ways. Sometimes it takes getting out of my comfort zone to achieve it.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
+				code: 'whatImLookingFor: "To be part of a team that builds innovative products.",',
+				explain: 'I learn quickly when surrounded by others who are like-minded and smarter than I am.'
+			}),
+			codeClass: 'objProp'
+		},
+		{
+			code: codeExplain({
 				code: 'passions: 7,',
 				explain: 'Programming, Photography, Computer-building, Soccer, Snowboarding, Coffee, and Traveling are deep passions I have.'
 			}),
