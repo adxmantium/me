@@ -427,7 +427,7 @@ const bioSection = [
 		{
 			code: codeExplain({
 				code: 'athleticism: "high",',
-				explain: 'I love playing all sports and feel pretty confident in my ability picking up new sports'
+				explain: 'I love playing all sports and feel pretty confident in my ability picking up new sports.'
 			}),
 			codeClass: 'objProp'
 		},
