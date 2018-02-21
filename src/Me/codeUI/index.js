@@ -16,7 +16,7 @@ export default class CodeUI extends Component {
 
 	render(){
 		return(
-			<div id="component">
+			<div id="editor">
 				{ HelloWorld.map((hello, i) => <Grid key={hello.code} {...hello} count={i+1} />) }
 			</div>
 		)
