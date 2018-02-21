@@ -427,7 +427,7 @@ const bioSection = [
 		{
 			code: codeExplain({
 				code: 'cupsOfCoffeePerDay: 2,',
-				explain: 'I enjoy a cup of coffee in the morning and the middle of the day. Moka Pot and French Press are my favorite brewing methods.'
+				explain: 'I enjoy a cup of coffee in the morning and another in the middle of the day. Moka Pot and French Press are my favorite brewing methods.'
 			}),
 			codeClass: 'objProp'
 		},
