@@ -24,10 +24,7 @@ $offset: 20;
 
 	    .show{ display: initial; }
 	    .showOnHover{ display: none; }
-
-	    .explain{
-	    	color: $mild;
-	    }
+	    .explain{ color: $mild; }
 
 	    &.standout{ background-color: $bgLight; }
 

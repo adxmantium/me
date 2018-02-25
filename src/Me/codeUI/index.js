@@ -16,18 +16,18 @@ export default class CodeUI extends Component {
 
 	render(){
 		return(
-			<div id="editor">
+			<main id="editor">
 				{ HelloWorld.map((hello, i) => <Grid key={hello.code} {...hello} count={i+1} />) }
-			</div>
+			</main>
 		)
 	}
 }
 
 const Grid = ({ count, codeClass, code, standout }) => {
 	return(
-		<div className={`grid ${standout ? standout : ''}`}>
+		<section className={`grid ${standout ? standout : ''}`}>
 			<div className="lineCount">{ count }</div>
 			<div className={`code ${codeClass ? codeClass : ''}`}>{ code }</div>
-		</div>
+		</section>
 	);
 }
